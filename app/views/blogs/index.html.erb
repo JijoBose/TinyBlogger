@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Blogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= link_to blog.title, blog %></td>
+        <td><%= pluralize(blog.votes.count, "vote") %></td>
+        <td><%= button_to '+1', upvote_blog_path(blog), method: :post %></td>
+        <td><%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blog', new_blog_path %>
