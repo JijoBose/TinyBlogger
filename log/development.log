@@ -177,3 +177,137 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 675ms (Views: 601.8ms | ActiveRecord: 2.0ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDownvotes (20161213144136)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "downvotes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "blog_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161213144136"]]
+  [1m[35m (102.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY "blogs"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "votes" ("blog_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["blog_id", 1], ["created_at", 2016-12-13 14:46:24 UTC], ["updated_at", 2016-12-13 14:46:24 UTC]]
+  [1m[35m (68.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."blog_id" = ?[0m  [["blog_id", 1]]
+  [1m[36mVote Load (0.5ms)[0m  [1m[34mSELECT  "votes".* FROM "votes" WHERE "votes"."blog_id" = ? ORDER BY "votes"."id" ASC LIMIT ?[0m  [["blog_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[31mDELETE FROM "votes" WHERE "votes"."id" = ?[0m  [["id", 2]]
+  [1m[35m (74.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/rails/info" for 127.0.0.1 at 2016-12-13 20:23:08 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::InfoController#index as HTML
+  Parameters: {"internal"=>true}
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 41ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2016-12-13 20:23:09 +0530
+Processing by Rails::InfoController#routes as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [11 times] (54.8ms)
+  Rendered /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (39.9ms)
+  Rendered /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.0.0.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (114.9ms)
+Completed 200 OK in 182ms (Views: 149.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 20:23:14 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."blog_id" = ?[0m  [["blog_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."blog_id" = ?[0m  [["blog_id", 1]]
+  Rendered blogs/index.html.erb within layouts/application (78.9ms)
+Completed 200 OK in 824ms (Views: 664.2ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/blogs/1/downvote" for 127.0.0.1 at 2016-12-13 20:23:18 +0530
+Processing by BlogsController#downvote as HTML
+  Parameters: {"authenticity_token"=>"FP8vrM3wSKPZjELgJT2E2A47ql0Dgl0kgrr/dpvlQLZLd0LrcdLi04+FWxBA++qpk8EqpCHUc9YdrBrBYc1qtw==", "id"=>"1"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "downvotes" ("blog_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["blog_id", 1], ["created_at", 2016-12-13 14:53:18 UTC], ["updated_at", 2016-12-13 14:53:18 UTC]]
+  [1m[35m (79.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 126ms (ActiveRecord: 83.2ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2016-12-13 20:23:19 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."blog_id" = ?[0m  [["blog_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."blog_id" = ?[0m  [["blog_id", 1]]
+  Rendered blogs/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 73ms (Views: 70.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/blogs/1/downvote" for 127.0.0.1 at 2016-12-13 20:23:20 +0530
+Processing by BlogsController#downvote as HTML
+  Parameters: {"authenticity_token"=>"f0Mt6kixCUo4U90814OZRpTS2sRjEPmCkZ6Ohwtw1m4gy0Ct9JOjOm5axMyyRfc3CShaPUFG13AOiGsw8Vj8bw==", "id"=>"1"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "downvotes" ("blog_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["blog_id", 1], ["created_at", 2016-12-13 14:53:20 UTC], ["updated_at", 2016-12-13 14:53:20 UTC]]
+  [1m[35m (63.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 92ms (ActiveRecord: 65.2ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2016-12-13 20:23:20 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."blog_id" = ?[0m  [["blog_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."blog_id" = ?[0m  [["blog_id", 1]]
+  Rendered blogs/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 85ms (Views: 81.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/blogs/1/upvote" for 127.0.0.1 at 2016-12-13 20:23:21 +0530
+Processing by BlogsController#upvote as HTML
+  Parameters: {"authenticity_token"=>"+UkQW7GXEsHVdB0yxlSrYfq31wvA51gVOOJt0Ac0wi6mwX0cDbW4sYN9BMKjksUQZ01X8uKxduen9Ihn/RzoLw==", "id"=>"1"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "votes" ("blog_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["blog_id", 1], ["created_at", 2016-12-13 14:53:21 UTC], ["updated_at", 2016-12-13 14:53:21 UTC]]
+  [1m[35m (97.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 124ms (ActiveRecord: 98.9ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2016-12-13 20:23:21 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."blog_id" = ?[0m  [["blog_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."blog_id" = ?[0m  [["blog_id", 1]]
+  Rendered blogs/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 54ms (Views: 50.3ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/blogs/1/upvote" for 127.0.0.1 at 2016-12-13 20:23:22 +0530
+Processing by BlogsController#upvote as HTML
+  Parameters: {"authenticity_token"=>"17RQqPVvO0xjz1kTQZHexzaEbD/345nDCRUjy5bCKOqIPD3vSU2RPDXGQOMkV7C2q37sxtW1tzGWA8Z8bOoC6w==", "id"=>"1"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "votes" ("blog_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["blog_id", 1], ["created_at", 2016-12-13 14:53:22 UTC], ["updated_at", 2016-12-13 14:53:22 UTC]]
+  [1m[35m (97.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 110ms (ActiveRecord: 98.1ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2016-12-13 20:23:22 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."blog_id" = ?[0m  [["blog_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."blog_id" = ?[0m  [["blog_id", 1]]
+  Rendered blogs/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 1.0ms)
+
+
