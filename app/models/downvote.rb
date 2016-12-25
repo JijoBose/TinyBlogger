@@ -1,3 +1,3 @@
 class Downvote < ApplicationRecord
-  belongs_to :blog
+  belongs_to :topic
 end
