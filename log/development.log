@@ -149,3 +149,130 @@ Processing by TopicsController#index as HTML
 Completed 200 OK in 74ms (Views: 71.4ms | ActiveRecord: 0.5ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDownvotes (20161225151849)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "downvotes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161225151849"]]
+  [1m[35m (99.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/topics" for 127.0.0.1 at 2016-12-25 20:54:52 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/index.html.erb within layouts/application (56.8ms)
+Completed 200 OK in 107ms (Views: 94.7ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/topics/1/upvote" for 127.0.0.1 at 2016-12-25 20:54:54 +0530
+Processing by TopicsController#upvote as HTML
+  Parameters: {"authenticity_token"=>"0/RPowNaMcqNWgBNydYuAOlJks00fCbnc7+6lHegO8SAoYUzKiYcOgQK6sXc7OY/wuUxK9YmU/OT+CH1lf8Yrw==", "id"=>"1"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "votes" ("topic_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["topic_id", 1], ["created_at", 2016-12-25 15:24:54 UTC], ["updated_at", 2016-12-25 15:24:54 UTC]]
+  [1m[35m (84.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 153ms (ActiveRecord: 85.5ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-25 20:54:54 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/topics/1/downvote" for 127.0.0.1 at 2016-12-25 20:54:55 +0530
+Processing by TopicsController#downvote as HTML
+  Parameters: {"authenticity_token"=>"Yp6cuh1D2pORSuxzTKFZJ14DwoRndas8uikjAbGD6Icxy1YqND/3YxgaBvtZm5EYda9hYoUv3ihabrhgU9zL7A==", "id"=>"1"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDownvote Load (0.3ms)[0m  [1m[34mSELECT "downvotes".* FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 1]]
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `created' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  create
+               create!):
+  
+app/controllers/topics_controller.rb:72:in `downvote'
+  Rendering /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.5ms)
+Started POST "/topics/1/downvote" for 127.0.0.1 at 2016-12-25 20:55:33 +0530
+Processing by TopicsController#downvote as HTML
+  Parameters: {"authenticity_token"=>"Yp6cuh1D2pORSuxzTKFZJ14DwoRndas8uikjAbGD6Icxy1YqND/3YxgaBvtZm5EYda9hYoUv3ihabrhgU9zL7A==", "id"=>"1"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "downvotes" ("topic_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["topic_id", 1], ["created_at", 2016-12-25 15:25:34 UTC], ["updated_at", 2016-12-25 15:25:34 UTC]]
+  [1m[35m (65.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 129ms (ActiveRecord: 70.2ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-25 20:55:34 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/index.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 67ms (Views: 63.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/topics/1/downvote" for 127.0.0.1 at 2016-12-25 20:55:35 +0530
+Processing by TopicsController#downvote as HTML
+  Parameters: {"authenticity_token"=>"H3tiX3PuBgBMVA181+mZTBncioIQYcqyKKxGk2anYtZMLqjPWpIr8MUE5/TC01FzMnApZPI7v6bI693yhPhBvQ==", "id"=>"1"}
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "downvotes" ("topic_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["topic_id", 1], ["created_at", 2016-12-25 15:25:35 UTC], ["updated_at", 2016-12-25 15:25:35 UTC]]
+  [1m[35m (112.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 125ms (ActiveRecord: 113.0ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-25 20:55:35 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 43ms (Views: 40.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/topics/1/upvote" for 127.0.0.1 at 2016-12-25 20:55:36 +0530
+Processing by TopicsController#upvote as HTML
+  Parameters: {"authenticity_token"=>"Mg7V5tbrOiyphBB2CHHRnSXKX7Qch4dInhkisxIq6TphWx92/5cX3CDU+v4dSxmiDmb8Uv7d8lx+XrnS8HXKUQ==", "id"=>"1"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "votes" ("topic_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["topic_id", 1], ["created_at", 2016-12-25 15:25:36 UTC], ["updated_at", 2016-12-25 15:25:36 UTC]]
+  [1m[35m (69.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 93ms (ActiveRecord: 71.3ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-25 20:55:36 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.8ms)
+
+
