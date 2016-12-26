@@ -4,16 +4,18 @@
 
 <table>
   <thead>
+  <!-- 
     <tr>
       <th>Title</th>
-      <th colspan="3"></th>
+      <th>colspan="3"></th>
     </tr>
   </thead>
+  -->
 
   <tbody>
     <% @topics.each do |topic| %>
       <tr>
-        <td><%= link_to topic.title, topic %></td>
+        <td><h2><%= link_to topic.title, topic %></h2></td>
         <td><%= pluralize(topic.votes.count, "vote") %></td>
         <td><%= pluralize(topic.downvotes.count, "downvote") %></td>
         <td><%= button_to '+1', upvote_topic_path(topic), method: :post %></td>

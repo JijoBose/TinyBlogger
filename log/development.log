@@ -908,3 +908,523 @@ Processing by TopicsController#show as HTML
 Completed 200 OK in 82ms (Views: 78.5ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-12-26 19:05:13 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/index.html.erb within layouts/application (122.5ms)
+Completed 200 OK in 9443ms (Views: 9383.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 19:05:29 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.9ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (113.6ms)
+  Rendered topics/show.html.erb within layouts/application (129.4ms)
+Completed 200 OK in 234ms (Views: 200.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 19:11:31 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (5.1ms)
+  Rendered topics/show.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 147ms (Views: 122.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-26 19:11:33 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 97ms (Views: 80.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-26 19:11:47 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 81ms (Views: 78.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-26 19:12:44 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 93ms (Views: 89.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-26 19:33:43 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 162ms (Views: 159.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 19:34:19 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (4.3ms)
+  Rendered topics/show.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 96ms (Views: 81.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/2/edit" for 127.0.0.1 at 2016-12-26 19:34:23 +0530
+Processing by TopicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/edit.html.erb within layouts/application
+  Rendered topics/_form.html.erb (5.7ms)
+  Rendered topics/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 93ms (Views: 59.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/topics/2" for 127.0.0.1 at 2016-12-26 19:34:35 +0530
+Processing by TopicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m6Sw9CZLWHfIp/xI5y3sQKUaj/ieJkMRcY0Yyw+uryPOBygEKgSeOrZt+9CpYCzpAyCUEIq6QEMd96vIuIeiVg==", "topic"=>{"title"=>"My First Blog post", "description"=>"hjshsdsd"}, "commit"=>"Update Topic", "id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "topics" SET "title" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["title", "My First Blog post"], ["updated_at", 2016-12-26 14:04:35 UTC], ["id", 2]]
+  [1m[35m (72.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 87ms (ActiveRecord: 73.3ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:34:35 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 70ms (Views: 67.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2016-12-26 19:36:03 +0530
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (3.5ms)
+  Rendered topics/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 76ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/topics" for 127.0.0.1 at 2016-12-26 19:36:22 +0530
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/3mdfrCw/WtQw91ciTUNUKfffSHj7qA/awVSZyMJllBFWbLNbCXuW0xqdu6HDYVVY0ppVuyoXcF75HEkws00WQ==", "topic"=>{"title"=>"My Second Blog topic", "description"=>"some description"}, "commit"=>"Create Topic"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "topics" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My Second Blog topic"], ["description", "some description"], ["created_at", 2016-12-26 14:06:22 UTC], ["updated_at", 2016-12-26 14:06:22 UTC]]
+  [1m[35m (208.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 217ms (ActiveRecord: 210.1ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:36:23 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 74ms (Views: 70.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:36:48 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 81ms (Views: 77.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:37:04 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 88ms (Views: 83.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/topics/3" for 127.0.0.1 at 2016-12-26 19:37:08 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (4.9ms)
+  Rendered topics/show.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 75ms (Views: 71.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:37:09 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 90ms (Views: 85.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:37:44 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 74ms (Views: 70.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:38:31 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 69ms (Views: 64.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:40:19 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 161ms (Views: 158.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:40:41 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:41:50 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 81ms (Views: 78.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:42:06 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 73ms (Views: 70.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:42:16 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 73ms (Views: 70.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:43:10 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 78ms (Views: 75.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:43:31 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 88ms (Views: 84.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:43:33 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 86ms (Views: 82.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:44:10 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 78ms (Views: 74.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:44:53 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 77ms (Views: 73.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:48:12 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 101ms (Views: 97.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:48:47 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 75ms (Views: 72.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 19:48:59 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (4.2ms)
+  Rendered topics/show.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 81ms (Views: 63.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:49:02 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 91ms (Views: 87.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 19:49:16 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 88ms (Views: 85.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 19:49:38 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (6.1ms)
+  Rendered topics/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 75ms (Views: 71.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 19:51:20 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (3.7ms)
+  Rendered topics/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 80ms (Views: 76.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 19:51:52 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (8.3ms)
+  Rendered topics/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 79ms (Views: 74.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 19:52:12 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (5.2ms)
+  Rendered topics/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 71ms (Views: 68.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 19:52:24 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (5.0ms)
+  Rendered topics/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 19:52:45 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (6.1ms)
+  Rendered topics/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 72ms (Views: 69.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 19:53:04 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (4.6ms)
+  Rendered topics/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 72ms (Views: 68.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 19:53:31 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (3.7ms)
+  Rendered topics/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 68ms (Views: 65.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 19:53:40 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (4.3ms)
+  Rendered topics/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 68ms (Views: 65.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-26 19:53:41 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 3]]
+  Rendered topics/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 1.2ms)
+
+

@@ -18,10 +18,11 @@
            <a class="navbar-brand" href="#">TinyBlogger</a>
          </div>
         <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home",   '#' %></li>
+          <ul class="nav navbar-nav navbar-left">
+            <li><%= link_to "Home", root_path %></li>
+            <!--
             <li><%= link_to "Help",   '#' %></li>
-            <li><%= link_to "Log in", '#' %></li>
+            <li><%= link_to "Log in", '#' %></li>-->
           </ul>
         </nav>
       </div>
@@ -31,21 +32,3 @@
     </div>
   </body>
 </html>
-
-<!-- 
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>TinyBlogger</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
-</html>
--->
