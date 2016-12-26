@@ -588,3 +588,323 @@ Processing by TopicsController#index as HTML
 Completed 200 OK in 93ms (Views: 88.3ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-12-26 17:41:12 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/index.html.erb within layouts/application (158.4ms)
+Completed 200 OK in 10104ms (Views: 10029.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-26 17:43:54 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 107ms (Views: 101.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-26 17:50:18 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 87ms (Views: 84.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-26 17:52:56 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 88ms (Views: 85.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2016-12-26 17:54:31 +0530
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (97.8ms)
+  Rendered topics/new.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 225ms (Views: 204.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2016-12-26 17:54:34 +0530
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (3.6ms)
+  Rendered topics/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 83ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2016-12-26 17:54:36 +0530
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (4.2ms)
+  Rendered topics/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 87ms (Views: 85.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2016-12-26 17:54:38 +0530
+Processing by TopicsController#new as HTML
+  Rendering topics/new.html.erb within layouts/application
+  Rendered topics/_form.html.erb (8.1ms)
+  Rendered topics/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 91ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-26 17:54:42 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 108ms (Views: 75.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/topics/2/downvote" for 127.0.0.1 at 2016-12-26 17:54:45 +0530
+Processing by TopicsController#downvote as HTML
+  Parameters: {"authenticity_token"=>"Qddlg2plK2J8lTl/wK6DzJzZT8Le1zyYDr8dF3g41iporTrgO0q4M7BQbuYH6Yw8O3/DZY3btZ8e9PD5n6MYrw==", "id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "downvotes" ("topic_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["topic_id", 2], ["created_at", 2016-12-26 12:24:45 UTC], ["updated_at", 2016-12-26 12:24:45 UTC]]
+  [1m[35m (69.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 127ms (ActiveRecord: 72.1ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 17:54:45 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 73ms (Views: 69.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/topics/2/upvote" for 127.0.0.1 at 2016-12-26 17:54:46 +0530
+Processing by TopicsController#upvote as HTML
+  Parameters: {"authenticity_token"=>"TiplElpkP9N/9t4xXgneoDA8v6vh9JGLwffkfxDF7ftnUDpxC0usgrMziaiZTtFQl5ozDLL4GIzRvAmR914jfg==", "id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "votes" ("topic_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["topic_id", 2], ["created_at", 2016-12-26 12:24:46 UTC], ["updated_at", 2016-12-26 12:24:46 UTC]]
+  [1m[35m (116.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics
+Completed 302 Found in 137ms (ActiveRecord: 117.2ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 17:54:46 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 79ms (Views: 76.4ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20161226123421)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "commenter" varchar, "body" text, "topic_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_topic_id" ON "comments" ("topic_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161226123421"]]
+  [1m[35m (111.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_topic_id' AND type='index'
+[0m
+Started GET "/topics" for 127.0.0.1 at 2016-12-26 18:14:48 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/index.html.erb within layouts/application (62.9ms)
+Completed 200 OK in 296ms (Views: 276.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 18:14:51 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (363.5ms)
+Completed 200 OK in 441ms (Views: 436.2ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/topics/2/comments" for 127.0.0.1 at 2016-12-26 18:15:07 +0530
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WMK290uX8zHvT0oEUNmPqgQW+OEcJ3+eUgN/zgfMcsmM4r/DeBCvQS5p6hBJgySRR9oftZIm/MKveERDb0FSwQ==", "comment"=>{"commenter"=>"jijo", "body"=>"noooo\r\n"}, "commit"=>"Create Comment", "topic_id"=>"2"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CommentsController::Article):
+  
+app/controllers/comments_controller.rb:3:in `create'
+  Rendering /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/bose/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.0ms)
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 18:21:01 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 189ms (Views: 162.9ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/topics/2/comments" for 127.0.0.1 at 2016-12-26 18:21:05 +0530
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O+gSKGNyHbJlPtsPGUXSbKuodwH/NAxVK1udYohcCbASkk1LMl2O46n7jJbeAt2cDA77pqw4hVI7EHCMb8fHNQ==", "comment"=>{"commenter"=>"jijo", "body"=>"ssdd"}, "commit"=>"Create Comment", "topic_id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "jijo"], ["body", "ssdd"], ["topic_id", 2], ["created_at", 2016-12-26 12:51:05 UTC], ["updated_at", 2016-12-26 12:51:05 UTC]]
+  [1m[35m (449.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics/2
+Completed 302 Found in 465ms (ActiveRecord: 453.2ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 18:21:06 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 68ms (Views: 65.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 18:23:40 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of comments/_comment.html.erb [1 times] (1.1ms)
+  Rendered topics/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 436ms (Views: 419.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 18:26:07 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of comments/_comment.html.erb [1 times] (0.8ms)
+  Rendered comments/_form.html.erb (4.2ms)
+  Rendered topics/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 415ms (Views: 411.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 18:33:25 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.4ms)
+  Rendered comments/_form.html.erb (5.0ms)
+  Rendered topics/show.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 221ms (Views: 199.0ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/topics/2/comments/1" for 127.0.0.1 at 2016-12-26 18:33:29 +0530
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C2I66MBBt8LQHHFtyPobfk/riYMzIGhv/hTyYcwH6/giGGWLkW4kkxzZJvQPvRSO6E0FJGAs4WjuXx+PK5wlfQ==", "topic_id"=>"2", "id"=>"1"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."topic_id" = ? AND "comments"."id" = ? LIMIT ?[0m  [["topic_id", 2], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 1]]
+  [1m[35m (402.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/topics/2
+Completed 302 Found in 416ms (ActiveRecord: 405.7ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 18:33:29 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.1ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (4.8ms)
+  Rendered topics/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 80ms (Views: 77.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 18:33:31 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.2ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (5.0ms)
+  Rendered topics/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 87ms (Views: 83.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-26 18:33:39 +0530
+Processing by TopicsController#index as HTML
+  Rendering topics/index.html.erb within layouts/application
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "downvotes" WHERE "downvotes"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered topics/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 115ms (Views: 84.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 18:33:41 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (7.5ms)
+  Rendered topics/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 87ms (Views: 82.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2016-12-26 18:33:43 +0530
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (4.9ms)
+  Rendered topics/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 82ms (Views: 78.5ms | ActiveRecord: 0.6ms)
+
+

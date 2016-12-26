@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :topics do
+    resources :comments
     member do
       post 'upvote'
       post 'downvote'
