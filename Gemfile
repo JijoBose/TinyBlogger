@@ -13,6 +13,9 @@ gem 'mysql2', '>= 0.3.18', '< 0.5'
 # bootstrap gems
 gem 'bootstrap-sass'
 gem 'bootstrap-sass-extras'
+# devise gems
+gem 'devise'
+gem 'simple_form'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
