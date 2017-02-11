@@ -1,0 +1,19 @@
+<%# link_to 'New Blog', new_blog_path %>
+
+<div class="col-md-8">
+    <% @blogs.each do |blog| %>
+         <!-- First Blog Post -->
+         <h2>
+           <%= link_to blog.title, blog %>
+         </h2>
+         <p class="lead">
+         by <%= blog.user_id %> |
+         <%= link_to 'Edit', edit_blog_path(blog) %> |
+         <%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+         </p>
+
+         <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
+         <p><%= blog.description %></p>
+      <hr>
+</div>
+    <% end %>
