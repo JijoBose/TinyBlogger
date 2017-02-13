@@ -1,17 +1,14 @@
 
-<p>
-  <strong>Title:</strong>
+<h1 align=center>
   <%= @blog.title %>
-</p>
+</h1>
 
+<h3 align=center>
+  by:<%= @blog.user_id %>
+</h3>
 <p>
-  <strong>User:</strong>
-  <%= @blog.user_id %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @blog.description %>
+  <%# @blog.description %>
+  <%= markdown @blog.description %>
 </p>
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |

@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require md_simple_editor
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
