@@ -16,6 +16,10 @@ gem 'bootstrap-sass-extras'
 # devise gems
 gem 'devise'
 gem 'simple_form'
+# markdown editor
+gem 'redcarpet'
+gem "font-awesome-rails"
+gem 'md_simple_editor'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
