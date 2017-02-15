@@ -7,7 +7,7 @@
            <%= link_to blog.title, blog %>
          </h2>
          <p class="lead" align=center>
-         by <%= blog.user.firstname %> |
+         by <%= blog.user.username %> |
          <%= link_to 'Edit', edit_blog_path(blog) %> |
          <%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
          </p>
